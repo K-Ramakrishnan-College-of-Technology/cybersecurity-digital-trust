@@ -3,6 +3,7 @@ import {
   Activity,
   Award,
   CheckSquare,
+  Download,
   KeyRound,
   Lock,
   MailWarning,
@@ -144,6 +145,25 @@ export const LayoutShell: React.FC<LayoutShellProps> = ({
               <span>Tier: {scoreTier}</span>
               <span>Local training</span>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2">
+            <a
+              href="/docs/Cybersecurity_Digital_Trust_Report.pdf"
+              download="Cybersecurity_Digital_Trust_Report.pdf"
+              className="flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg text-[11px] font-medium bg-[#0C1424] border border-slate-800 text-cyan-300 hover:border-cyan-400/40 hover:bg-slate-800/60 transition-colors whitespace-nowrap"
+            >
+              <Download className="w-3.5 h-3.5 shrink-0" />
+              <span>Report PDF</span>
+            </a>
+            <a
+              href="/docs/Cybersecurity_Digital_Trust_Presentation.pptx"
+              download="Cybersecurity_Digital_Trust_Presentation.pptx"
+              className="flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-lg text-[11px] font-medium bg-[#0C1424] border border-slate-800 text-emerald-300 hover:border-emerald-400/40 hover:bg-slate-800/60 transition-colors whitespace-nowrap"
+            >
+              <Download className="w-3.5 h-3.5 shrink-0" />
+              <span>Slides PPTX</span>
+            </a>
           </div>
 
           {!confirmReset ? (
